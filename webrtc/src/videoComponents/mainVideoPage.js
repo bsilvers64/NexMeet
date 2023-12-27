@@ -1,0 +1,1 @@
+// this is where the user will get dropped when they will click on the link to join
