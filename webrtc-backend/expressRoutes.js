@@ -22,5 +22,16 @@ app.get('/user-link', (req, res) => {
     const token = jwt.sign(apptData, linkSecret);
 
     res.send("https://localhost:3000/join-video?token="+token);
+    // MainVideoPage component is displayed on this route
 
+})
+
+//extracting token and decoding using secret-key to get our payload(object)
+app.post('/validate-link', (req, res) => {
+    // get it from the body thanks to express.json() middleware
+    const token = req.body.token;
+    const decodedData = jwt.verify(token, linkSecret);
+    console.log(decodedData);
+    // send decoded token back to front-end
+    res.json(decodedData)
 })
