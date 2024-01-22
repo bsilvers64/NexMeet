@@ -1,4 +1,39 @@
-# Webrtc Video Call Application
+# Webrtc Video Conferencing Application
+
+**Front-end only portion**
+
+    - getUserMedia() - getting access to the mic and camera in the browser
+
+    - playing the feed in a <video/>
+
+    - MediaStream and MediaStreamTrack - what makes up a video feed
+
+    - Constraints - getSupportedConstraints() and getCapabilities() - seeing what this browser can do
+
+    - applyConstraints - changing the feed on the fly
+
+    - Recording video/audio and playing it back
+
+    - Capturing the Screen for screen share and recording it
+
+    - Changing input/output devices in your feed
+
+**Back-End required (node, socketio)**
+
+    - RTCPeerConnection - the heart of webRTC
+
+    - Creating an offer and an answer
+
+    - Setting RTCSessionDescription
+
+    - The Signaling Process
+
+    - Build a signaling server with socketio
+
+    - Gathering ICE Candidates
+
+    - Building a React app w/redux that uses webRTC
+
 
 
 1. We will run our project with https on localhost by using mkcert for adding crt and key. And adding set HTTPS=true and path to these certificate and key in react-scripts of npm start.
